@@ -15,4 +15,12 @@ describe("API Testing", () => {
     );
     expect(response.status).to.equal(200);
   });
+
+  it("should return status 200 for GET /users/1", async () => {
+    // New test case
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/users/1"
+    );
+    expect(response.status).to.equal(200);
+  });
 });
